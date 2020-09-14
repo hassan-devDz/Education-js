@@ -93,6 +93,9 @@ pre {
 
 a {
     background-color: transparent;
+    text-decoration: none;
+    font-style: normal;
+    color: #62787d;
 }
 
 
