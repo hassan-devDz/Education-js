@@ -33,6 +33,10 @@ nav {
     justify-content: space-between
 }
 
+p {
+    word-spacing: 4px;
+}
+
 
 /*======= الشريط العلوي ======= */
 
@@ -290,6 +294,70 @@ nav {
 /*======= ======= حولنا ======= ==========*/
 
 .head-howlna {
+    direction: rtl;
     display: flex;
     flex-direction: column;
+}
+
+.titel {
+    text-align: center;
+}
+
+.titel>p {
+    color: #514e4e;
+}
+
+.body-info {
+    display: flex;
+}
+
+.video {
+    align-self: center;
+}
+
+.database {
+    display: flex;
+}
+
+.database i {
+    font-size: 33px;
+    padding-left: 10px;
+    margin-top: 13px;
+    color: #01b1d7;
+}
+
+h3 {
+    color: #6c6767;
+}
+
+.database p {
+    color: #7d7a7a;
+    margin-left: 30px;
+    text-align: justify;
+}
+
+.font {
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+
+/*======= كلمة الوزير =======*/
+
+.kalma {
+    padding: 80px 0;
+    background: url("../image/testimonials-bg.webp") no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+}
+
+.wazir {
+    text-align: center;
+}
+
+.wazir>img {
+    width: 100px;
+    border-radius: 50%;
 }
