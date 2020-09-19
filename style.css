@@ -1,9 +1,10 @@
+@charset "UTF-8";
 *,
 :before,
 :after {
     box-sizing: border-box;
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
 html {
@@ -25,7 +26,7 @@ body {
 nav {
     display: flex;
     align-items: center;
-    justify-content: space-between
+    justify-content: space-between;
 }
 
 p {
@@ -37,7 +38,7 @@ p {
 
 .top {
     padding: 10px 5px;
-    font-size: 18px
+    font-size: 18px;
 }
 
 .right {
@@ -214,7 +215,7 @@ p {
     margin: 0px auto;
     text-align: center;
     font-size: 27px;
-    color: rgba(255, 255, 255, 1);
+    color: white;
     font-family: 'Open Sans', sans-serif;
     z-index: 9999;
     text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
@@ -314,6 +315,7 @@ p {
 
 .database {
     display: flex;
+    padding: 5px;
 }
 
 .database i {
@@ -328,7 +330,7 @@ h3 {
 }
 
 .database p {
-    color: #7d7a7a;
+    color: #938d8d;
     margin-left: 30px;
     text-align: justify;
 }
@@ -393,6 +395,16 @@ h3 {
 
 /*======من مشاريعنا =======*/
 
+.masharia:hover img {
+    transform: scale(1);
+    transition: .4s;
+}
+
+.our-projects {
+    transition: all .5s ease-in-out;
+    padding: 50px 0;
+}
+
 .projects {
     text-align: center;
 }
@@ -415,16 +427,16 @@ h3 {
     color: whitesmoke;
 }
 
-$width: 100%;
 .img-item {
     justify-content: normal;
     position: relative;
     overflow: hidden;
     height: 240px;
-    width: #{$width};
-    .tabs {
-        width: calc(#{$width}/3);
-    }
+    width: 100%;
+}
+
+.img-item .tabs {
+    width: calc(100%/3);
 }
 
 .tabs {
@@ -439,7 +451,6 @@ $width: 100%;
 
 .tabs:hover img {
     transform: scale(1.1);
-    transition: .4s;
 }
 
 .tabs:hover .img-f {
@@ -454,12 +465,12 @@ $width: 100%;
 
 .tabs:nth-child(2) {
     top: 0;
-    left: calc(#{$width}/3);
+    left: calc(100%/3);
 }
 
 .tabs:last-child {
     top: 0;
-    left: calc((#{$width}/3)*2);
+    left: calc((100%/3)*2);
 }
 
 .img-f {
@@ -496,4 +507,103 @@ $width: 100%;
     padding: 5px;
     background-color: whitesmoke;
     color: #00b2d7;
+}
+
+
+/*# sourceMappingURL=style.css.map */
+
+
+/* Element | http://127.0.0.1:5500/index.html */
+
+.img-f>h4:nth-child(1) {
+    margin-bottom: 5px;
+}
+
+
+/* Element | http://127.0.0.1:5500/index.html */
+
+.img-f>p:nth-child(2) {
+    margin-bottom: 20px;
+}
+
+
+/* style.css | http://127.0.0.1:5500/style.css */
+
+.icons {
+    /* margin-top: 15px; */
+    display: flex;
+}
+
+.icons a {
+    display: flex;
+    width: 30px;
+    height: 30px;
+}
+
+
+/* Element | http://127.0.0.1:5500/index.html */
+
+.icofont-plus {
+    font-size: 18px;
+}
+
+
+/* Element | http://127.0.0.1:5500/index.html */
+
+.icons>a:nth-child(1) {
+    margin-right: 6px;
+}
+
+
+/* Element | http://127.0.0.1:5500/index.html */
+
+.icofont-link {
+    font-size: 18px;
+}
+
+
+/*====== كرونولوجيا=======*/
+
+.chronology .head-howlna {
+    direction: ltr;
+}
+
+.chronology .one,
+.chronology .two {
+    flex: 1;
+}
+
+.chronology .one {
+    order: 2;
+}
+
+.chronology .database {
+    flex-direction: row-reverse;
+    text-align: end;
+    padding: 13px;
+}
+
+.chronology p {
+    direction: rtl;
+}
+
+.cart {
+    display: flex;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #f2f9ff;
+}
+
+.cart:hover {
+    box-shadow: 0px 2px 15px rgba(43, 27, 235, 0.1)
+}
+
+.body-cart span {
+    color: #525252fa;
+}
+
+.head>img {
+    width: 100%;
+    border-radius: 50%;
 }
