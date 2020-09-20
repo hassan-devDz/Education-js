@@ -23,6 +23,15 @@ body {
     margin: 0 auto;
 }
 
+header {
+    position: sticky;
+    top: 0px;
+    background: whitesmoke;
+    z-index: 12;
+    transition: all 0.5s;
+    box-shadow: 0 2.8px 2.2px rgba(31, 30, 30, 0.16);
+}
+
 nav {
     display: flex;
     align-items: center;
@@ -106,6 +115,10 @@ p {
     color: #01b1d7;
 }
 
+.active-scrol {
+    color: #01b1d7;
+}
+
 .items .item:hover {
     color: #01b1d7;
 }
@@ -116,7 +129,6 @@ p {
 .carousel {
     position: relative;
     box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
-    margin-top: 26px;
 }
 
 .carousel-inner {

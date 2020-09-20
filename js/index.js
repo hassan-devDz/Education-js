@@ -1,4 +1,36 @@
 
+
+var h = document.querySelector("header"),
+    nav_top = document.querySelector(".carousel"),
+    items = document.querySelector(".items"),
+    fields = document.getElementById("fields"),
+    about = document.getElementById("about"),
+    our_projects = document.getElementById("our-projects"),
+    chronology = document.getElementById("chronology"),
+    arr = [nav_top, about, fields, our_projects, chronology],
+    stickPoint = getDistance;
+
+function getDistance(par) {
+    var topDist = par.offsetTop + par.offsetHeight;
+
+    return topDist;
+}
+
+window.onscroll = function (e) {
+    //- window.pageYOffset,
+
+    offset = window.pageYOffset + 500;
+    console.log(offset)
+    arr.forEach((x, rek) => {
+
+        if (offset >= x.offsetTop && offset <= getDistance(x)) {
+            document.querySelector('.active-scrol').classList.remove('active-scrol');
+            items.children[rek].classList.add('active-scrol');
+        }
+
+    });
+
+}
 // =====================   من مشاريعنا
 const active = document.querySelector(".projects")
 console.log(active)
