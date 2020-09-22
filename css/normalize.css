@@ -225,6 +225,10 @@ input {
    * 1. Remove the inheritance of text transform in Firefox.
    */
 
+button {
+    border: none;
+}
+
 button,
 select {
     /* 1 */
