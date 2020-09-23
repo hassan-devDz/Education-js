@@ -97,6 +97,22 @@
     content: "\eef3"
 }
 
+.icofont-star:before {
+    content: "\f000"
+}
+
+.icofont-laptop-alt:before {
+    content: "\ea41"
+}
+
+.icofont-check:before {
+    content: "\eed8"
+}
+
+.icofont-close:before {
+    content: "\eee4"
+}
+
 .icofont-xs {
     font-size: .5em
 }
