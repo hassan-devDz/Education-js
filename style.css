@@ -56,16 +56,16 @@ p {
     flex-basis: 33%;
 }
 
-.fa-twitter,
-.fa-facebook-f {
+.icofont-twitter,
+.icofont-facebook {
     color: #62787d;
 }
 
-.fa-facebook-f:hover {
+.icofont-facebook:hover {
     color: #4267B2;
 }
 
-.fa-twitter:hover {
+.icofont-twitter:hover {
     color: #1da1f2;
 }
 
@@ -73,13 +73,10 @@ p {
     margin-right: 10px;
 }
 
-.fa-phone {
+.icofont-ui-email,
+.icofont-phone {
     padding-left: 5px;
     color: #01b1d7;
-}
-
-.email {
-    margin-left: 10px;
 }
 
 .fa-at,
@@ -105,6 +102,11 @@ p {
 
 .middle h1 a {
     color: #354144;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
 }
 
 .items .item:nth-child(-n+5) {
@@ -275,14 +277,14 @@ p {
     cursor: pointer;
     height: 8px;
     width: 8px;
-    background-color: rgba(17, 104, 9, .5);
+    background-color: rgba(219, 223, 218, .68);
     transition: background-color .3s;
     border-radius: 50%;
     margin: 4px
 }
 
 .selected {
-    background-color: red !important
+    background-color: #01b1d7 !important
 }
 
 .content-animtions h1 {
@@ -743,4 +745,32 @@ h3 {
 .count-items span {
     font-size: 2.5em;
     color: #01b1d7;
+}
+
+
+/*=============*/
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+}
+
+
+/* Modal Content */
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
 }
