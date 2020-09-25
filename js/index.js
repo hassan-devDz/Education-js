@@ -9,7 +9,6 @@ const h = document.querySelector("header"),
     arr = [nav_top, about, fields, our_projects, chronology],
     stickPoint = getDistance,
     count_items = document.querySelector(".count-items").children,
-    ticking = false,
     height = counter.getClientRects(),
     active = document.querySelector(".projects"),
     sliderItems = document.getElementById("slides"),
@@ -18,16 +17,13 @@ const h = document.querySelector("header"),
     indicatots_ol = document.getElementById("indicatots-ol"),
     carouselImages = document.querySelectorAll(".carousel-seat"),
     f = [...sliderItems.children];
-
+let ticking = false;
 for (const [key, value] of Object.entries(sliderItems.children)) {
     let addchiled = document.createElement("li");
     addchiled.setAttribute("class", "indicator-item");
     indicatots_ol.appendChild(addchiled);
 }
-/*[...].forEach(() => {
-    
 
-})*/
 indicatots_ol.firstElementChild.classList.add("selected");
 
 function getDistance(par) {
@@ -277,3 +273,28 @@ function slide(items, prev, next, ind) {
 }
 
 slide(sliderItems, prev, next, indicatots_ol);
+//===============modal
+const img_full = document.getElementById("img-full");
+let img01 = document.getElementById("img01");
+const model = document.querySelector(".img-item");
+
+model.addEventListener("click", function(ev) {
+    let target1 = getEventTarget(ev);
+    const iconplus = target1.closest(".plus");
+    let nodes = Array.from(document.querySelectorAll(".plus")); // get array
+    let index_plus = nodes.indexOf(iconplus);
+    if (iconplus != null) {
+        img01.src = iconplus.offsetParent.previousElementSibling.src;
+        if (index_plus == 1) {
+            img01.src = "../image/portfolio-3-full.webp";
+        }
+        document.body.style.overflow = "hidden";
+        img_full.style.display = "block";
+    }
+});
+const close = document.querySelector(".close");
+close.addEventListener("click", function() {
+    document.body.style.overflow = "auto";
+    img_full.style.display = "none";
+    img01.src = "";
+});
