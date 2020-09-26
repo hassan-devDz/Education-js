@@ -74,6 +74,7 @@ window.addEventListener("scroll", function(e) {
 
 function getEventTarget(e) {
     e = e || window.event;
+
     return e.target;
 }
 active.addEventListener("click", function(event) {
@@ -138,7 +139,7 @@ function slide(items, prev, next, ind) {
         posFinal,
         threshold = 100,
         slides = items.children,
-        slidesLength = sliderItems.childElementCount,
+        slidesLength = items.childElementCount,
         firstSlide = items.firstElementChild,
         lastSlide = items.lastElementChild,
         cloneFirst = firstSlide.cloneNode(true),
@@ -277,13 +278,22 @@ slide(sliderItems, prev, next, indicatots_ol);
 const img_full = document.getElementById("img-full");
 let img01 = document.getElementById("img01");
 const model = document.querySelector(".img-item");
+let plus = document.querySelectorAll(".plus");
+let close_class = document.querySelector(".close");
+model.addEventListener("click", y);
+let dir;
 
-model.addEventListener("click", function(ev) {
-    let target1 = getEventTarget(ev);
+function y() {
+    let target1 = getEventTarget();
+    console.log(target1);
     const iconplus = target1.closest(".plus");
-    let nodes = Array.from(document.querySelectorAll(".plus")); // get array
+
+    let nodes = Array.from(plus); // get array
     let index_plus = nodes.indexOf(iconplus);
+    currentSlide(index_plus);
+    console.log(iconplus, index_plus);
     if (iconplus != null) {
+        console.log(iconplus);
         img01.src = iconplus.offsetParent.previousElementSibling.src;
         if (index_plus == 1) {
             img01.src = "../image/portfolio-3-full.webp";
@@ -291,10 +301,51 @@ model.addEventListener("click", function(ev) {
         document.body.style.overflow = "hidden";
         img_full.style.display = "block";
     }
+}
+window.addEventListener("click", function(ef) {
+    var e = getEventTarget();
+    console.log(e);
+    if (e == img_full || e == close_class) {
+        document.body.style.overflow = "auto";
+        img_full.style.display = "none";
+        img01.src = "";
+    }
 });
-const close = document.querySelector(".close");
-close.addEventListener("click", function() {
-    document.body.style.overflow = "auto";
-    img_full.style.display = "none";
-    img01.src = "";
-});
+
+function openModal() {
+    document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+const plusSlides = () => {
+    showSlides((slideIndex += 1));
+};
+const tarhSlides = () => {
+    showSlides((slideIndex -= 1));
+};
+const currentSlide = (n) => {
+    showSlides((slideIndex = n));
+};
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("img-f");
+    if (n >= slides.length) {
+        slideIndex = 0;
+    }
+    if (n < 0) {
+        slideIndex = slides.length - 1;
+    }
+    if (slideIndex == 1) {
+        img01.src = "../image/portfolio-3-full.webp";
+    } else {
+        img01.src = slides[slideIndex].previousElementSibling.src;
+    }
+}
+caption.firstElementChild.addEventListener("click", tarhSlides);
+caption.lastElementChild.addEventListener("click", plusSlides);
