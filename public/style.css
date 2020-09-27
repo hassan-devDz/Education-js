@@ -52,6 +52,10 @@ nav {
     justify-content: space-between;
 }
 
+ul {
+    list-style-type: none;
+}
+
 p {
     word-spacing: 4px;
 }
@@ -958,4 +962,181 @@ h3 {
     right: 2%;
     top: 5%;
     font-size: 1.5rem;
+}
+
+.caption {
+    display: flex;
+    color: wheat;
+    position: fixed;
+    top: 50%;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.icofont-simple-left,
+.icofont-simple-right {
+    color: whitesmoke;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+/*==================form=========*/
+
+
+/* Inline #4 | http://127.0.0.1:5500/index.html */
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.card {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -.5rem;
+    margin-left: -.5rem;
+    margin-top: -.5rem;
+}
+
+.p-field {
+    margin-bottom: 1rem;
+}
+
+.flex {
+    padding: 2rem;
+    -webkit-box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
+    border-radius: 4px;
+    margin-bottom: 2rem;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    width: 100%;
+}
+
+.p-inputtext {
+    padding: 0 0.5rem;
+    border: 1px solid #ced4da;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    appearance: none;
+    border-radius: 3px;
+    width: 100%;
+}
+
+.p-inputtext:enabled:hover,
+.select_mate:hover {
+    border-color: #2196F3;
+}
+
+.p-inputtext:enabled:focus {
+    outline: 0 none;
+    outline-offset: 0;
+    box-shadow: 0 0 0 0.2rem #a6d5fa;
+    border-color: #2196F3;
+}
+
+.col {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    padding: .5rem;
+}
+
+
+/*===========select=========*/
+
+.icon_select_mate {
+    position: absolute;
+    top: 7px;
+    left: 2%;
+    height: 22px;
+    transition: all 275ms;
+}
+
+.select_mate {
+    position: relative;
+    color: #777;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: all 375ms ease-in-out;
+    border: 1px solid #ced4da;
+    border-radius: 3px;
+    max-height: 37px;
+    /* Oculto el elemento select */
+}
+
+.select_mate select {
+    position: absolute;
+    overflow: hidden;
+    height: 0px;
+    opacity: 0;
+    z-index: -1;
+}
+
+.cont_list_select_mate {
+    position: relative;
+    /* float: left;
+    width: 100%; */
+}
+
+.cont_select_int {
+    position: absolute;
+    z-index: 999;
+    overflow: hidden;
+    height: 0px;
+    width: 100%;
+    background-color: #fff;
+    padding: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    border-radius: 3px;
+    box-shadow: 1px 4px 10px -2px rgba(0, 0, 0, 0.2);
+    transition: all 375ms ease-in-out;
+}
+
+.cont_select_int li {
+    /* position: relative;
+     border-bottom: 1px solid #E0E0E0;
+    float: left; 
+    width: 100%;*/
+    border-radius: 3px;
+    background-color: #F5F5F5;
+    list-style-type: none;
+    padding: 0 5%;
+    margin: 0px;
+    transition: all 275ms ease-in-out;
+    display: block;
+    cursor: pointer;
+}
+
+.cont_select_int li:last-child {
+    border-radius: 3px;
+    border-bottom: 0px;
+}
+
+.cont_select_int li:hover:not(.active) {
+    background-color: #EEEEEE;
+}
+
+.cont_select_int .active {
+    background-color: #1da1f2
+}
+
+
+/* etiqueta <p> con la opcion selecionada  */
+
+.selecionado_opcion {
+    padding: 0 2%;
+    width: 100%;
+    display: block;
+    margin: 0px;
+    cursor: pointer;
 }
